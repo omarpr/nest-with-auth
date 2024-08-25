@@ -122,11 +122,11 @@ describe('AppController (e2e)', () => {
   });
 
   describe('get profile', () => {
-    it('get profile fails if not authenticated', () => {
+    it('fails if not authenticated', () => {
       getProfile().expect(401);
     });
 
-    it('get profile succeeds if authenticated', () => {
+    it('succeeds if authenticated', () => {
       getProfile(accessToken)
         .expect(200)
         .expect((res) => {
